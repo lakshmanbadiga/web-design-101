@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+header {
+  color: blue;
+}
+
+table.table-main {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px 0px;
+}
+
+th,
+td {
+  border-collapse: collapse;
+  padding: 8px;
+  font-family: "Poppins"; 
+  letter-spacing: 1px; 
+  margin: 10px; 
+  border: 2px solid black; 
+  width: fit-content; 
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+}
+
+.margin-auto {
+  margin: auto;
+  width: 50%;
+}
