@@ -1,0 +1,40 @@
+body {
+    background-image: url('universe.webp');
+}
+
+label, input{
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: bisque;
+}
+
+table, th, td, tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+form {
+    margin: 15px;
+    border: 1px solid black;
+    padding: 15px;
+    width: 50%;
+}
+
+h3 {
+    margin-top: 0px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table-container {
+    border: 1px solid black;
+    margin: 15px;
+    padding: 15px;
+    background-color: burlywood;
+}

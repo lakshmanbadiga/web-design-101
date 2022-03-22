@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lakshman Badiga</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="javascript:savedetails()">
+        <label for="rollno">Roll Number: </label
+        ><input type="text" id="rollno" name="rollno" /><br />
+        <label for="fullname">Full Name: </label
+        ><input type="text" id="fullname" name="fullname" /><br />
+        <label for="course">Course: </label
+        ><input type="text" id="course" name="course" /><br />
+        <label for="year">Year: </label
+        ><input type="text" id="year" name="year" /><br />
+        <label for="grade">Grade: </label
+        ><input type="text" id="grade" name="grade" /><br />
+        <input type="submit" value="Add to table" />
+      </form>
+
+      <div class="table-container">
+        <h3>Details Table</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Roll Number</th>
+              <th>Full Name</th>
+              <th>Course</th>
+              <th>Year</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody id="data"> <!--User Details-->
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+        function savedetails() { //adding students
+            let rollno = document.getElementById("rollno").value //Roll No Value
+            let fullname = document.getElementById("fullname").value //Full Name Value
+            let course = document.getElementById("course").value //Course Value
+            let year = document.getElementById("year").value //Year Value
+            let grade = document.getElementById("grade").value //Grade Value
+            
+            let tr = document.createElement('tr')
+
+            tr.innerHTML = 
+            '<td>' + rollno + '</td>' + 
+            '<td>' + fullname + '</td>' + 
+            '<td>' + course + '</td>' + 
+            '<td>' + year + '</td>' + 
+            '<td>' + grade + '</td>'
+
+            let detailstable = document.getElementById('data')
+
+            detailstable.appendChild(tr) //Adding student to the table
+        }
+    </script>
+  </body>
+</html>
