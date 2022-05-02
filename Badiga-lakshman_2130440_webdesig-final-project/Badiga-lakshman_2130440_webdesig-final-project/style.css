@@ -96,13 +96,27 @@ nav .fa{
     }
     .nav-links{
         position: absolute;
-        background: #f44336;
+        background: #5f5c5c;
         height: 100vh;
         width: 200px;
         top: 0;
         right: 0;
         text-align: left;
         z-index: 2;
+        transition: 0.5s;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer; 
+    }
+    .text-box h1{
+        font-size: 20px;
     }
 }
 
