@@ -1,0 +1,212 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Designs™</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!----------link for bootstrap----------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"> </a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-close" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>Good design doesn't date</h1>
+        <p>
+          for a house to be successful, Objects must communicate with one
+          another,<br />respond and balance with one another
+        </p>
+        <a href="contact.html" class="hero-btn">Visit Us to Know More</a>
+      </div>
+    </section>
+
+     <!---------branches----------->
+
+     <section class="branches" id="branches">
+      <h1>OUR BRANCHES</h1>
+      <div class="container">
+        
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#menu1">Banglore</a></li>
+          <li><a data-toggle="tab" href="#menu2">Pune</a></li>
+          <li><a data-toggle="tab" href="#menu3">Hyderabad</a></li>
+        </ul>
+      
+        <div class="tab-content">
+          <div id="menu1" class="tab-pane fade in active">
+            <p>Banglore Dream Designs™ office is where all the magic started  our most experienced professionals prevail here till now. </p>
+          </div>
+          <div id="menu2" class="tab-pane fade">
+            <p>Hyderabad Dream Designs™ office is filled with novel budding talents that specialise in modern contemporary designs. </p>
+          </div>
+          <div id="menu3" class="tab-pane fade">
+            <p>Pune Dream Designs™ office has a plathora of designers to decide from, they contain from old school to neo style, artistic to corporate themes. </p>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------SPECIALIZATION------------>
+
+    <h1 style="text-align: center; margin:auto; " id="Ser">SERVICES</h1><br><br>
+    <div class="slideView-container">
+      <!-- Full-width caption text -->
+      <div class="splSlides">
+        <div class="text">Interior designing of house <br> corporate Interior designing</div>
+      </div>
+
+      <div class="splSlides">
+        <div class="text">Decoration of all events </div>
+      </div>
+
+      <div class="splSlides">
+        <div class="text">event planning with destination planning </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!---------- PROJECTS ---------->
+
+    <section class="projects">
+      <h1>Our best projects</h1>
+      <p>It is because of these projects Dream Designs™ is here today</p>
+      <div class="row">
+        <div class="projects-col">
+          <img src="images/indiantraditional.jpg" />
+          <div class="layer">
+            <h3>OLD MONK</h3>
+          </div>
+        </div>
+        <div class="projects-col">
+          <img src="images/indian-architecture.webp" />
+          <div class="layer">
+            <h3>ROYAL STAG</h3>
+          </div>
+        </div>
+        <div class="projects-col">
+          <img src="images/Tiara.jpg" />
+          <div class="layer">
+            <h3>JOHNNY WALKER</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!----JavaScript for toggle menu---->
+     <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+     //------script for myslides-------//
+      let mainSlider = 1;
+        slideView(mainSlider);
+  
+        // Next/previous controls
+        function plusSlides(n) {
+          slideView((mainSlider += n));
+        }
+  
+        // Thumbnail image controls
+        function currentSlide(n) {
+          slideView((mainSlider = n));
+        }
+  
+        function slideView(n) {
+          let i;
+          let slides = document.getElementsByClassName("splSlides");
+  
+          if (n > slides.length) {
+            mainSlider = 1;
+          }
+          if (n < 1) {
+            mainSlider = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+  
+          slides[mainSlider - 1].style.display = "block";
+        }
+        // -----script for postmail------//
+var submitButton = document.getElementById("submit_form");
+    var form = document.getElementById("email_form");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
+    });
+
+
+
+        
+      
+    </script>
+
+    <!-------- footer ---------->
+
+    <section class="footer">
+      <h4>Follow us</h4>
+      <p>
+        Design with style<br />
+        Design with smile
+      </p>
+      <div class="icons">
+        <a href="https://instagram.com/lakshman_46?igshid=YmMyMTA2M2Y="
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a href="https://instagram.com/lakshman_46?igshid=YmMyMTA2M2Y="
+          ><i class="fa fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com/lakshman_46?igshid=YmMyMTA2M2Y="
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a href="https://instagram.com/lakshman_46?igshid=YmMyMTA2M2Y="
+          ><i class="fa fa-linkedin"></i
+        ></a>
+      </div>
+      <a
+        href="https://instagram.com/lakshman_46?igshid=YmMyMTA2M2Y="
+        class="footer-link"
+        ><p>made with <i class="fa fa-heart-o"></i> by Lakshman Badiga</p></a
+      >
+    </section>
+
+   
+  </body>
+</html>
