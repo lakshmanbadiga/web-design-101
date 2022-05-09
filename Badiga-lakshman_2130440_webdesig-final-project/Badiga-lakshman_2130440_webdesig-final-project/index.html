@@ -11,6 +11,11 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <!----------link for bootstrap----------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <section class="header">
@@ -36,6 +41,57 @@
         <a href="contact.html" class="hero-btn">Visit Us to Know More</a>
       </div>
     </section>
+
+     <!---------branches----------->
+
+     <section class="branches" id="branches">
+      <h1>OUR BRANCHES</h1>
+      <div class="container">
+        
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#menu1">Banglore</a></li>
+          <li><a data-toggle="tab" href="#menu2">Pune</a></li>
+          <li><a data-toggle="tab" href="#menu3">Hyderabad</a></li>
+        </ul>
+      
+        <div class="tab-content">
+          <div id="menu1" class="tab-pane fade in active">
+            <p>Banglore Dream Designs™ office is where all the magic started  our most experienced professionals prevail here till now. </p>
+          </div>
+          <div id="menu2" class="tab-pane fade">
+            <p>Hyderabad Dream Designs™ office is filled with novel budding talents that specialise in modern contemporary designs. </p>
+          </div>
+          <div id="menu3" class="tab-pane fade">
+            <p>Pune Dream Designs™ office has a plathora of designers to decide from, they contain from old school to neo style, artistic to corporate themes. </p>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------SPECIALIZATION------------>
+
+    <h1 style="text-align: center; margin:auto; " id="Ser">SERVICES</h1><br><br>
+    <div class="slideView-container">
+      <!-- Full-width caption text -->
+      <div class="splSlides">
+        <div class="text">Interior designing of house <br> corporate Interior designing</div>
+      </div>
+
+      <div class="splSlides">
+        <div class="text">Decoration of all events </div>
+      </div>
+
+      <div class="splSlides">
+        <div class="text">event planning with destination planning </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
 
     <!---------- PROJECTS ---------->
 
@@ -64,77 +120,55 @@
       </div>
     </section>
 
-    <!---------CAROUSOEL-------->
+     <!----JavaScript for toggle menu---->
+     <script>
+      var navLinks = document.getElementById("navLinks");
 
-    <div
-      id="carouselExampleCaptions"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+     //------script for myslides-------//
+      let mainSlider = 1;
+        slideView(mainSlider);
+  
+        // Next/previous controls
+        function plusSlides(n) {
+          slideView((mainSlider += n));
+        }
+  
+        // Thumbnail image controls
+        function currentSlide(n) {
+          slideView((mainSlider = n));
+        }
+  
+        function slideView(n) {
+          let i;
+          let slides = document.getElementsByClassName("splSlides");
+  
+          if (n > slides.length) {
+            mainSlider = 1;
+          }
+          if (n < 1) {
+            mainSlider = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+  
+          slides[mainSlider - 1].style.display = "block";
+        }
+        
+
+
+
+        
+      
+    </script>
 
     <!-------- footer ---------->
 
@@ -165,17 +199,6 @@
       >
     </section>
 
-    <!----JavaScript for toggle menu---->
-    <script>
-      var navLinks = document.getElementById("navLinks");
-
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
-
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
+   
   </body>
 </html>
